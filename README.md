@@ -14,7 +14,8 @@ docker run --rm --interactive --tty -v $(pwd):/app composer install  --ignore-pl
 ./vendor/bin/sail build --no-cache
 ./vendor/bin/sail up -d
 ./vendor/bin/sail artisan migrate
-./vendor/bin/sail artisan artisan make:filament-user
+./vendor/bin/sail artisan storage:link
+./vendor/bin/sail artisan make:filament-user
 ./vendor/bin/sail root-shell
 chown -R sail:sail /var/www/html
 chown -R sail:sail /var/www/html/vendor
