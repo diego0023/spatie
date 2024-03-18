@@ -10,7 +10,7 @@
 * [spatie-media-library](https://filamentphp.com/plugins/filament-spatie-media-library)
 # Cloning the project
 ```
-docker run --rm --interactive --tty -v $(pwd):/app composer install
+docker run --rm --interactive --tty -v $(pwd):/app composer install  --ignore-platform-reqs
 ./vendor/bin/sail build --no-cache
 ./vendor/bin/sail up -d
 ./vendor/bin/sail artisan migrate
